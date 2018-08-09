@@ -10,6 +10,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: 'Custom title!',
       template: './src/index.template.ejs',
       inject: 'body',
     })
