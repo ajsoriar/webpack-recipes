@@ -16,4 +16,4 @@ will execute the script available in package.json: webpack --mode development
 
 This will be executed: $ webpack --mode production
 
-    In this case ./dist/main.js will be automatically minified out of the box by webpack 4
+    ./dist/main.js will be automatically minified out of the box by webpack 4

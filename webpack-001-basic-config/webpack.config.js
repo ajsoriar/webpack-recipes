@@ -13,6 +13,7 @@ module.exports = {
       title: 'Custom title!',
       template: './src/index.template.ejs',
       inject: 'body',
+      hash: true, //Notice the hash option has been set to true which will add a unique hash to the src of the embedded <script> tag.
     })
   ],
 };
