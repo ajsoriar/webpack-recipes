@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>
+    my library!
+  </title>
+  <!-- <script type="text/javascript" src="../lib/library.js"></script> -->
+  <script type="text/javascript" src="./ajsr-require.js"> </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>
+      Content here!
+    </h1>
+    Check the console. The library should be working fine.
+    <br> Check out this:
+    <b>https://webpack.js.org/guides/author-libraries/</b>
+  </div>
+  <script>
+
+    'use strict'
+
+    // Import js files
+    var andres = require('./andres');
+    andres.doItNow();
+    andres.doItASAP();
+
+
+    var hello = require('./library');
+    console.log("hello:", hello);
+    var h = new hello("hi");
+    hello.start();
+
+    // library.start();
+    // library.do();
+    // library.end();
+    // library.doStuff1();
+
+/*
+    import('../lib/library.js')
+      .then((module) => {
+
+        console.log("module:", module);
+
+        //module.doStuff1();
+
+        //module();
+
+        // library.start();
+        // library.do();
+        // library.end();
+
+        //library();
+
+      });
+
+      //library();
+*/
+
+  </script>
+</body>
+
+</html>
