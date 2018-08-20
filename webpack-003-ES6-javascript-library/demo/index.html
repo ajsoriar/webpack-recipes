@@ -8,6 +8,7 @@
   </title>
   <!-- <script type="text/javascript" src="../lib/library.js"></script> -->
   <script type="text/javascript" src="./ajsr-require.js"> </script>
+  <script src="./../lib/library.js"></script>
 </head>
 
 <body>
@@ -29,11 +30,13 @@
     andres.doItNow();
     andres.doItASAP();
 
+    //var hello = require('./../lib/library');
+    //console.log("hello:", hello);
+    //var h = new library("hi");
+    libraryAndres.default.start();
 
-    var hello = require('./library');
-    console.log("hello:", hello);
-    var h = new hello("hi");
-    hello.start();
+    //library = new libraryAndres("hello");
+
 
     // library.start();
     // library.do();

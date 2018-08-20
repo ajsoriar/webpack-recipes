@@ -4,23 +4,14 @@ var outputFile = libraryName + '.js';
 
 var config = {
   entry: './src/library-source-code.js',
-  //devtool: 'source-map',
-
-  /*
-  output: {
-    path: __dirname + '/lib',
-    filename: outputFile,
-    library: libraryName,
-    libraryTarget: 'umd',
-    umdNamedDefine: true
-  },
-  */
-
   output: {
     filename: outputFile, // 'main.js',
-    path: path.resolve(__dirname, 'lib')
+    path: path.resolve(__dirname, 'lib'),
+    library: 'libraryAndres',
+    //libraryTarget: 'umd',
+    //umdNamedDefine: true
+    //libraryTarget:'window'
   },
-
   module: {
 
     /*

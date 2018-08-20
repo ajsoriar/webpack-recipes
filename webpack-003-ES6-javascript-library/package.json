@@ -1,7 +1,8 @@
 {
   "name": "webpack-basic-config-001",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/library.js",
+  "module": "src/library-source-code.js",
   "dependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
