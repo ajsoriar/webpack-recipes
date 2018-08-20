@@ -2,67 +2,41 @@ console.log("[library] File starts.");
 import extraStuff from './library-extra-code'
 import MoreCode from './more-code'
 
-// let user = new MoreCode("Cindy");
-//MoreCode.sayHi();
+export default class Library {
 
-//const Library = function() {
-const Library = {
-
-    /*
-    console.log("[library] library function starts.");
-    // let user = new MoreCode("Melanie");
-    // MoreCode.sayHi();
-    const arr = [1,2,3,4,5,6,7,8,9,10];
-    const doStuff1 = () => {
-        return arr.map(x => x * 2);
-    }
-    const doStuff2 = () => arr.map(x => x * 2);
-    return {
-    */
-
-    start: () => {
-        console.log("[library] We start here. Have fun!");
-        console.log("[library] extraStuff.cont:", extraStuff.cont );
-        extraStuff.cont += 1;
-        extraStuff.jump();
-        extraStuff.add();
-        console.log("[library] extraStuff.cont:", extraStuff.cont );    
-    },
-    do: () => {
-        console.log("[library] We start here. Have fun!");
-        console.log(doStuff1());
-        console.log(doStuff2());
-    },
-    end: () => {
-        console.log("[library] This is the end...");
-    }
-
-}
-
-
-/*
-class Library {
     constructor(name) {
-      this._name = name || 'Library';
+        //super();
+        this.name = name || 'Library';
+        this.cont = 0;
     }
     start() {
         console.log("[library] We start here. Have fun!");
-        console.log("[library] extraStuff.cont:", extraStuff.cont );
+        console.log("[library] extraStuff.cont:", extraStuff.cont);
         extraStuff.jump();
-        console.log("[library] extraStuff.cont:", extraStuff.cont );    
+        let hi = new MoreCode();
+        hi.sayHi();
     }
     do() {
         console.log("[library] We start here. Have fun!");
-        console.log(doStuff1());
-        console.log(doStuff2());
+        console.log(this.doMore());
+        this.cont += 1;
+        console.log("[library] this.cont:", this.cont);
+    }
+    doMore() {
+        console.log("[library] do more!");
+        this.cont += 5;
+        return this.cont;
     }
     end() {
         console.log("[library] This is the end...");
     }
     say(msg) {
         console.log(this.name + " says: " + msg);
+        var msg = new SpeechSynthesisUtterance(msg);
+        window.speechSynthesis.speak(msg);
     }
-  }
-  */
 
-export default Library; //
+}
+
+// expose global
+global.Library = new Library();

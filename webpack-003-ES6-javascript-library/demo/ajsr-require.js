@@ -15,6 +15,8 @@ function require(path) {
 
     var code = xhr.responseText;
 
+    console.log("code:", code);
+
     eval(code);
 
     return module.exports;

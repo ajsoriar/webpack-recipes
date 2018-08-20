@@ -87,6 +87,17 @@ var libraryAndres =
 /************************************************************************/
 /******/ ({
 
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn this;\n})();\n\ntry {\n\t// This works if eval is allowed (see CSP)\n\tg = g || Function(\"return this\")() || (1, eval)(\"this\");\n} catch (e) {\n\t// This works if the window reference is available\n\tif (typeof window === \"object\") g = window;\n}\n\n// g can still be undefined, but nothing to do about it...\n// We return undefined, instead of nothing here, so it's\n// easier to handle this case. if(!global) { ...}\n\nmodule.exports = g;\n\n\n//# sourceURL=webpack://libraryAndres/(webpack)/buildin/global.js?");
+
+/***/ }),
+
 /***/ "./src/library-extra-code.js":
 /*!***********************************!*\
   !*** ./src/library-extra-code.js ***!
@@ -107,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\nconsole.log(\"extra stuff her
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _library_extra_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./library-extra-code */ \"./src/library-extra-code.js\");\n/* harmony import */ var _more_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./more-code */ \"./src/more-code.js\");\nconsole.log(\"[library] File starts.\");\n\n\n\n// let user = new MoreCode(\"Cindy\");\n//MoreCode.sayHi();\n\n//const Library = function() {\nconst Library = {\n\n    /*\r\n    console.log(\"[library] library function starts.\");\r\n    // let user = new MoreCode(\"Melanie\");\r\n    // MoreCode.sayHi();\r\n    const arr = [1,2,3,4,5,6,7,8,9,10];\r\n    const doStuff1 = () => {\r\n        return arr.map(x => x * 2);\r\n    }\r\n    const doStuff2 = () => arr.map(x => x * 2);\r\n    return {\r\n    */\n\n    start: () => {\n        console.log(\"[library] We start here. Have fun!\");\n        console.log(\"[library] extraStuff.cont:\", _library_extra_code__WEBPACK_IMPORTED_MODULE_0__[\"default\"].cont);\n        _library_extra_code__WEBPACK_IMPORTED_MODULE_0__[\"default\"].cont += 1;\n        _library_extra_code__WEBPACK_IMPORTED_MODULE_0__[\"default\"].jump();\n        _library_extra_code__WEBPACK_IMPORTED_MODULE_0__[\"default\"].add();\n        console.log(\"[library] extraStuff.cont:\", _library_extra_code__WEBPACK_IMPORTED_MODULE_0__[\"default\"].cont);\n    },\n    do: () => {\n        console.log(\"[library] We start here. Have fun!\");\n        console.log(doStuff1());\n        console.log(doStuff2());\n    },\n    end: () => {\n        console.log(\"[library] This is the end...\");\n    }\n\n    /*\r\n    class Library {\r\n        constructor(name) {\r\n          this._name = name || 'Library';\r\n        }\r\n        start() {\r\n            console.log(\"[library] We start here. Have fun!\");\r\n            console.log(\"[library] extraStuff.cont:\", extraStuff.cont );\r\n            extraStuff.jump();\r\n            console.log(\"[library] extraStuff.cont:\", extraStuff.cont );    \r\n        }\r\n        do() {\r\n            console.log(\"[library] We start here. Have fun!\");\r\n            console.log(doStuff1());\r\n            console.log(doStuff2());\r\n        }\r\n        end() {\r\n            console.log(\"[library] This is the end...\");\r\n        }\r\n        say(msg) {\r\n            console.log(this.name + \" says: \" + msg);\r\n        }\r\n      }\r\n      */\n\n};/* harmony default export */ __webpack_exports__[\"default\"] = (Library); //\n\n//# sourceURL=webpack://libraryAndres/./src/library-source-code.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Library; });\n/* harmony import */ var _library_extra_code__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./library-extra-code */ \"./src/library-extra-code.js\");\n/* harmony import */ var _more_code__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./more-code */ \"./src/more-code.js\");\nconsole.log(\"[library] File starts.\");\n\n\n\nclass Library {\n\n    constructor(name) {\n        //super();\n        this.name = name || 'Library';\n        this.cont = 0;\n    }\n    start() {\n        console.log(\"[library] We start here. Have fun!\");\n        console.log(\"[library] extraStuff.cont:\", _library_extra_code__WEBPACK_IMPORTED_MODULE_0__[\"default\"].cont);\n        _library_extra_code__WEBPACK_IMPORTED_MODULE_0__[\"default\"].jump();\n        let hi = new _more_code__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n        hi.sayHi();\n    }\n    do() {\n        console.log(\"[library] We start here. Have fun!\");\n        console.log(this.doMore());\n        this.cont += 1;\n        console.log(\"[library] this.cont:\", this.cont);\n    }\n    doMore() {\n        console.log(\"[library] do more!\");\n        this.cont += 5;\n        return this.cont;\n    }\n    end() {\n        console.log(\"[library] This is the end...\");\n    }\n    say(msg) {\n        console.log(this.name + \" says: \" + msg);\n        var msg = new SpeechSynthesisUtterance(msg);\n        window.speechSynthesis.speak(msg);\n    }\n\n}\n\n// expose global\nglobal.Library = new Library();\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/webpack/buildin/global.js */ \"./node_modules/webpack/buildin/global.js\")))\n\n//# sourceURL=webpack://libraryAndres/./src/library-source-code.js?");
 
 /***/ }),
 
@@ -119,7 +130,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _lib
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconsole.log(\"MoreCode!\");\n\nclass MoreCode {\n\n  constructor(name) {\n    this.name = name;\n  }\n\n  sayHi() {\n    //alert(this.name);\n    console.log(this.name);\n  }\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MoreCode);\n\n//# sourceURL=webpack://libraryAndres/./src/more-code.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconsole.log(\"MoreCode!\");\n\nclass MoreCode {\n\n  constructor(name) {\n\n    this.name = name || \"Andres\";\n    console.log(\"[MoreCode] constructor()\");\n  }\n\n  sayHi() {\n    //alert(this.name);\n    console.log(\"[MoreCode] name: \" + this.name);\n  }\n\n}\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MoreCode);\n\n//# sourceURL=webpack://libraryAndres/./src/more-code.js?");
 
 /***/ })
 

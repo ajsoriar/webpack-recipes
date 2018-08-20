@@ -6,23 +6,23 @@
   <title>
     my library!
   </title>
-  <!-- <script type="text/javascript" src="../lib/library.js"></script> -->
   <script type="text/javascript" src="./ajsr-require.js"> </script>
-  <script src="./../lib/library.js"></script>
+  <!-- <script type="text/javascript" src="../lib/library.js"></script> -->
+  <!-- <script src="./../lib/library.js"></script> -->
 </head>
 
 <body>
 
   <div class="container">
     <h1>
-      Content here!
+      Content here!!!
     </h1>
     Check the console. The library should be working fine.
     <br> Check out this:
     <b>https://webpack.js.org/guides/author-libraries/</b>
   </div>
-  <script>
 
+  <script>
     'use strict'
 
     // Import js files
@@ -30,41 +30,15 @@
     andres.doItNow();
     andres.doItASAP();
 
-    //var hello = require('./../lib/library');
-    //console.log("hello:", hello);
-    //var h = new library("hi");
-    libraryAndres.default.start();
+    //var library = 
+    require('./../lib/library');
 
-    //library = new libraryAndres("hello");
-
-
-    // library.start();
-    // library.do();
-    // library.end();
-    // library.doStuff1();
-
-/*
-    import('../lib/library.js')
-      .then((module) => {
-
-        console.log("module:", module);
-
-        //module.doStuff1();
-
-        //module();
-
-        // library.start();
-        // library.do();
-        // library.end();
-
-        //library();
-
-      });
-
-      //library();
-*/
-
+    Library.start();
+    Library.do();
+    Library.doMore();
+    Library.end();
   </script>
+
 </body>
 
 </html>

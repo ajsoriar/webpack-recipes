@@ -8,9 +8,10 @@ var config = {
     filename: outputFile, // 'main.js',
     path: path.resolve(__dirname, 'lib'),
     library: 'libraryAndres',
-    //libraryTarget: 'umd',
     //umdNamedDefine: true
     //libraryTarget:'window'
+    //libraryTarget:'umd'
+    libraryTarget: 'var'
   },
   module: {
 
