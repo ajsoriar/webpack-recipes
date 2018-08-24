@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>My react component!</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js" crossorigin></script>
+  <script type="text/javascript" src="./ajsr-require.js"> </script>
+  <script type="module" src="./../lib/my-react-library.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      Content here!!!
+    </h1>
+  </div>
+  <div id="root"></div>
+  <div id="root-2"></div>
+  <script>
+    'use strict'
+    console.log("Hello from index.html!");
+
+    // Import js files
+    var Library = require('./../lib/my-react-library');
+    //import Library from '../lib/my-react-library';
+
+  </script>
+  <script type="text/javascript" src="./index.js"> </script>
+</body>
+
+</html>
