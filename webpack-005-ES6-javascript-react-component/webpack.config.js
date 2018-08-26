@@ -17,12 +17,12 @@ var config = {
     library: ''
     //libraryTarget: 'var'
     //libraryTarget: 'commonJS'
-
     /*
     libraryTarget: 'umd',
     umdNamedDefine: true
     */  
   },
+  externals: ['react', 'prop-types'], // This line is key! or React will be included in the bundle!!!
   module: {
    rules: [
         {
