@@ -1,3 +1,5 @@
+import style from "./main.css";
+
 console.log(`I'm happy!`);
 
 const arr = [1, 2, 3];
