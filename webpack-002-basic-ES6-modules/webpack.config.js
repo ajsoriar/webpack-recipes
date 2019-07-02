@@ -8,6 +8,17 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
+    module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Page title!',
@@ -21,18 +32,5 @@ module.exports = {
       //  conservativeCollapse: true
       //}
     })
-  ],
-
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-        }
-      }
-    ]
-  }
-
+  ]
 };
