@@ -1,11 +1,11 @@
-To work
--------
+# vanilla.js SPA - webpack, babel, sass
 
-1) npm instal
+## Develop
 
-2) npm run start
+1) yarn instal
 
-To build
---------
+2) yarn start
+
+## Build
 
 yarn build

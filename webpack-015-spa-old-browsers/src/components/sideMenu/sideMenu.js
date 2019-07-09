@@ -1,4 +1,4 @@
-import "./sideMenu.css"
+import "./sideMenu.scss"
 import strMenu from "./sideMenu.html";
 
 (function () {
