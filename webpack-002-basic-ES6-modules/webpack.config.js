@@ -1,6 +1,7 @@
 const path = require('path');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+//const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -32,5 +33,16 @@ module.exports = {
       //  conservativeCollapse: true
       //}
     })
-  ]
+  ],
+  // optimization: {
+  //   minimizer: [
+  //     new TerserPlugin({
+  //       terserOptions: {
+  //         //keep_fnames: false,
+  //         //mangle: true, 
+  //         compress:false,
+  //       },
+  //     }),
+  //   ]
+  // }
 };
