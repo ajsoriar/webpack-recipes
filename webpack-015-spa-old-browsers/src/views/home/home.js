@@ -1,3 +1,5 @@
+console.log("Home.js");
+
 import './response.home.js';
 
 // --------------------------------
