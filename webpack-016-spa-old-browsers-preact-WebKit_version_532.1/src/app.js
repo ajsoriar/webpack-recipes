@@ -12,7 +12,6 @@
 import './router';
 
 let App = {
-
     render: () => {
         console.log("App render!");
     },
@@ -21,16 +20,6 @@ let App = {
     },
     init: () => {
         console.log("App init!");
-
-        //sideMenu.init("side_menu_container",menuOptions);
-        //topMenu.init();
-
-        // services.getUserData();
-        // services.getFolders(()=>{
-        //     // success
-        // },()=>{
-        //     // error
-        // })
     }
 }
 

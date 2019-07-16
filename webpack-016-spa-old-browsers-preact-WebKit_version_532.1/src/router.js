@@ -41,7 +41,6 @@ const router = () => {
     let page = routes[parsedURL] ? routes[parsedURL] : Error404
     content.innerHTML = page.render();
     page.after_render();
-
 }
 
 // Listen on hash change:

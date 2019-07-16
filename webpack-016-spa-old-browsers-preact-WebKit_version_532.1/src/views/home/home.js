@@ -1,10 +1,11 @@
 console.log("Home.js");
-
-import './response.home.js';
-
+import users from './data.users.json';
 import preact from 'preact';
-import { render } from 'preact';
+import {
+    render
+} from 'preact';
 import Clock from './../../components/clock/clock.js';
+import './home.css';
 
 // --------------------------------
 //  Define Data Sources
@@ -30,26 +31,25 @@ let getPostsList =  () => {
 */
 
 let Home = {
-    render :  () => {
-        let users = window.users;
-        let view =  /*html*/`
-            <section class="section">
+    "render": () => {
+        let usersArr = users.users;
+        let view = /*html*/ `
+            <section class="section users-list">
                 <h1> Home </h1>
                 <ul>
-                    ${ users.map(post => 
-                        /*html*/`<li><a href="#/p/${post.id}">${post.title}</a></li>`
+                    ${ usersArr.map(user => 
+                        /*html*/`<li><div class="ico"></div><a href="#/p/${user.id}">${user.name}</a></li>`
                         ).join('\n ')
                     }
                 </ul>
+                <div id="rootHome"></div>
             </section>
         `
         return view
-    }, after_render:  () => {
-
-
-            const reactRootNode = document.getElementById("root");
-            render(<Clock />, reactRootNode);
-    
+    },
+    "after_render": () => {
+        const reactRootNode = document.getElementById("rootHome");
+        render( < Clock / > , reactRootNode);
     }
 
 }

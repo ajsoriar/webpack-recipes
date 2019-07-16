@@ -26,7 +26,3 @@ const doIt = () => console.log(...arr);
 window.doIt = doIt;
 
 Bye();
-
-// const reactRootNode = document.getElementById("root");
-// render(<Clock />, reactRootNode);
-
