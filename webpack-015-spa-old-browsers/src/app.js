@@ -30,6 +30,9 @@ let App = {
         // },()=>{
         //     // error
         // })
+
+        window.sideMenu.init("sideMenu");
+
     }
 }
 

@@ -4,6 +4,11 @@
 // q,
 // AuthService,
 
+import {
+    BASE_PATH,
+    LOL_PATH
+} from './../constants';
+
 const requestService = () => {
 
     // Here we handle a list of previous requests in order to stop calling
@@ -84,7 +89,7 @@ const requestService = () => {
 
         $http({
             method: request.type,
-            url: request.url,
+            url: BASE_PATH + request.url,
             data: request.bodyData
         }).then(function successCallback(responseData) {
 

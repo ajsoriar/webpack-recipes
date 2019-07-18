@@ -6,10 +6,12 @@ import "./css/main.css"
 import Hello from './js/js_file_A'; // import is ECMA6
 import Bye from './js/js_file_B'; // import is ECMA6
 import "./components/sideMenu/sideMenu";
+import "./components/topMenu/topMenu";
 
 Hello();
 
-window.sideMenu.init("sideMenu");
+
+
 import App from './app.js';
 App.init();
 console.log(`I'm happy!`);
