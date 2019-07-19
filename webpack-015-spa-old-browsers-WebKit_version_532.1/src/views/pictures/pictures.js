@@ -1,4 +1,5 @@
 console.log("pictures.js");
+import RESOURCES_PATH from './../../constants/services'
 
 // --------------------------------
 //  Define Data Sources
@@ -31,16 +32,17 @@ let Home = {
 
         console.log("Render Pictures!");
 
-        let content1 = /*html*/ `
+        let content2 = /*html*/ `
             <section class="section">
                 <h1> Pictures </h1>
+                <!-- grid content here! -->
             </section>
         `
 
         let view = /*html*/ `
             <div class="section section-home">
                 <div id="main-container" class="main-container">
-                ${ content1 }     
+                ${ content2 }     
                 </div>
             </div>
             `
@@ -48,7 +50,7 @@ let Home = {
     },
     after_render: () => {
         console.log("After render Pictures!");
-        window.topMenu.init("home-top-menu");
+        //window.topMenu.init("home-top-menu");
     }
 
 }

@@ -1,6 +1,6 @@
 import Home         from './views/home/home'
 import Error404 from './views/Error404'
-import Utils from './services/utils'
+import Utils from './utils/utils'
 import About from './views/about/about'
 import Login from './views/logIn/login'
 import Pictures from './views/pictures/pictures'
@@ -13,7 +13,7 @@ const routes = {
     //'/register'   : Register,
     '/login'      : Login,
     '/home'       : Home,
-    '/pictures'   : Pictures,
+    '/pictures'   : Pictures
     //'/videos'     : videos,
     //'/galleries'  : Galleries,
     //'/more'       : More
