@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "text": "Folder 1",
+            "id": "000",
+            "itemType": "FOLDER"
+        },
+        {
+            "text": "Folder 2",
+            "id": "001",
+            "itemType": "FOLDER"
+        },
+        {
+            "text": "Picture 1",
+            "id": "010",
+            "itemType": "PICTURE"
+        }, {
+            "text": "Folder 3",
+            "id": "011",
+            "itemType": "FOLDER"
+        },
+        {
+            "text": "User Name 1",
+            "id": "100",
+            "itemType": "USER"
+        }
+    ]
+}

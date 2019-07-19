@@ -1,0 +1,42 @@
+{
+    "items": [
+        {
+            "text": "Folder 2",
+            "id": "001",
+            "itemType": "FOLDER"
+        },
+        {
+            "text": "Picture 1",
+            "id": "010",
+            "itemType": "PICTURE"
+        }, {
+            "text": "Folder 3",
+            "id": "011",
+            "itemType": "FOLDER"
+        },
+        {
+            "text": "User Name 1",
+            "id": "100",
+            "itemType": "USER"
+        },
+        {
+            "text": "Folder 2",
+            "id": "001",
+            "itemType": "FOLDER"
+        },
+        {
+            "text": "Picture 1",
+            "id": "010",
+            "itemType": "PICTURE"
+        }, {
+            "text": "Folder 3",
+            "id": "011",
+            "itemType": "FOLDER"
+        },
+        {
+            "text": "User Name 1",
+            "id": "100",
+            "itemType": "USER"
+        }
+    ]
+}

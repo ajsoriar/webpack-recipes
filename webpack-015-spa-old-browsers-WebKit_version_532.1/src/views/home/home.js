@@ -1,10 +1,14 @@
 console.log("Home.js");
-
-import './response.home.js';
+import users from './data.users.json';
+import Keyboard from './../../components/keyboard/keyboard';
+import hList from './../../components/lists/hList/hList.js';
 
 // --------------------------------
 //  Define Data Sources
 // --------------------------------
+
+import listData1 from './../../components/lists/hList/list.data.1.json';
+import listData2 from './../../components/lists/hList/list.data.2.json';
 
 /*
 let getPostsList =  () => {
@@ -26,22 +30,49 @@ let getPostsList =  () => {
 */
 
 let Home = {
-    render :  () => {
-        let users = window.users;
-        let view =  /*html*/`
+    render: () => {
+
+        console.log("Render Home!");
+
+        let usersArr = users.users;
+
+        let content1 = /*html*/ `
             <section class="section">
                 <h1> Home </h1>
                 <ul>
-                    ${ users.map(post => 
-                        /*html*/`<li><a href="#/p/${post.id}">${post.title}</a></li>`
+                    ${ usersArr.map(user => 
+                        /*html*/`<li><div class="ico"></div><a href="#/p/${user.id}">${user.name}</a></li>`
                         ).join('\n ')
                     }
                 </ul>
+
+                ${ global.list2Handler = hList( listData2.items ) }
+
+                ${ hList( listData1.items, {
+
+                } ) }
+
+                ${ Keyboard() }
+
+                ${ Keyboard() }
+
             </section>
         `
+
+        let view = /*html*/ `
+            <div class="section section-home">
+                <div id="home-top-menu" class="topMenu"></div>
+                <div id="main-container" class="main-container">
+                ${ content1 }     
+                </div>
+            </div>
+            `
         return view
-    }, after_render:  () => {
-    
+    },
+    after_render: () => {
+        console.log("After render Home!");
+        window.topMenu.init("home-top-menu");
+        //global.list2Handler.clear();
     }
 
 }

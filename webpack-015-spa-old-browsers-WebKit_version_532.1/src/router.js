@@ -1,8 +1,9 @@
 import Home         from './views/home/home'
-import Error404 from './pages/Error404'
+import Error404 from './views/Error404'
 import Utils from './services/utils'
 import About from './views/about/about'
 import Login from './views/logIn/login'
+import Pictures from './views/pictures/pictures'
 
 // List of supported routes. Any url other than these routes will throw a 404 error
 const routes = {
@@ -11,8 +12,8 @@ const routes = {
     //'/p/:id'      : PostShow,
     //'/register'   : Register,
     '/login'      : Login,
-    '/home'       : Home
-    //'/pictures'   : Pictures,
+    '/home'       : Home,
+    '/pictures'   : Pictures,
     //'/videos'     : videos,
     //'/galleries'  : Galleries,
     //'/more'       : More

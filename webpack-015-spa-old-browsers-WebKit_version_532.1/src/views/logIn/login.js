@@ -24,8 +24,7 @@ let Login = {
         return view
     }, 
     after_render:  () => {
-        
-        console.log("Login after_render!");
+        console.log("Login after render!");
     }
 
 }
