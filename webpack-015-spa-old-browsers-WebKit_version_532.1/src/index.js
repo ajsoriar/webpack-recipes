@@ -1,3 +1,5 @@
+import '@babel/polyfill';
+
 console.log("index.js");
 
 // import is ECMA6 so  we need npm install babel-loader babel-core babel-preset-env webpack

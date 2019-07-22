@@ -1,4 +1,5 @@
 console.log("pictures.js");
+import LazyLoad from './../../utils/lazyLoad';
 import RESOURCES_PATH from './../../constants/services'
 
 // --------------------------------
@@ -51,6 +52,12 @@ let Home = {
     after_render: () => {
         console.log("After render Pictures!");
         //window.topMenu.init("home-top-menu");
+
+        LazyLoad( './lol.js', ()=>{
+            console.log(1);
+        }, ()=>{
+            console.log(0);
+        });
     }
 
 }

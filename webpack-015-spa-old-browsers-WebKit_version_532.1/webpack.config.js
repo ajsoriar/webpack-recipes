@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -57,18 +58,23 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       //chunkFilename: "[id].css"
-    })
+    }),
+    new CopyPlugin([
+      { from: './src/private'},
+      { from: './src/vendor', to: './vendor/'},
+    ])
   ],
   optimization: {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
-          //keep_fnames: false,
-          //mangle: true, 
+          keep_fnames: false,
+          mangle: false, 
           compress:false,
         },
       }),
     ],
+    minimize: true
 
     // splitChunks: {
     //   cacheGroups: {
